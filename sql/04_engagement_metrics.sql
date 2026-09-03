@@ -1,4 +1,3 @@
--- ============================================
 -- 04_engagement_metrics.sql
 -- Purpose: Calculate per-customer engagement metrics using Gap & Island logic
 --          (longest streak, current gap, current streak length)

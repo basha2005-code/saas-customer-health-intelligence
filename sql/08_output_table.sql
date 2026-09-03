@@ -26,7 +26,7 @@ ORDER BY
         WHEN 'Healthy' THEN 4
         WHEN 'Churned' THEN 5
     END,
-    mrr DESC; 
+    mrr DESC;
 -------------------- 
 SELECT risk_tier, COUNT(*) FROM ( 
 SELECT

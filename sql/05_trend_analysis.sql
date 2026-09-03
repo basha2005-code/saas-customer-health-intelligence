@@ -49,4 +49,8 @@ JOIN LATERAL (
     FROM usage_events_clean u
     WHERE u.customer_id = s.customer_id
       AND u.event_date <= s.check_date
-) e ON true;
+) e ON true; 
+
+
+select * from gap_as_of_checkpoint; 
+select * from customer_date_spine;

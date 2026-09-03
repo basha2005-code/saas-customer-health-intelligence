@@ -30,7 +30,7 @@ SELECT
              AND (SELECT MAX(payment_date) FROM payments) - MAX(p.payment_date) FILTER (WHERE LOWER(p.payment_status) = 'success') > (365 + 15)
         THEN 1
         ELSE 0
-    END AS payment_flag
+    END AS payment_flag   
 FROM payments p
 JOIN subscriptions s ON s.customer_id = p.customer_id
 WHERE s.subscription_status = 'Active'

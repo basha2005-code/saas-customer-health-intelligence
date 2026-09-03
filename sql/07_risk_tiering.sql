@@ -39,7 +39,7 @@ continuous_trend AS (
         COUNT(*) OVER (PARTITION BY d.customer_id) AS total_checkpoints,
         AVG(d.gap_delta) OVER (PARTITION BY d.customer_id ORDER BY d.check_date ROWS BETWEEN 6 PRECEDING AND CURRENT ROW) AS avg_delta,
         ROW_NUMBER() OVER (PARTITION BY d.customer_id ORDER BY d.check_date DESC) AS rn
-    FROM deltas d
+    FROM deltas 
 ),
 router_output AS (
     SELECT cs.customer_id,
